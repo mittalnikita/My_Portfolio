@@ -1,0 +1,30 @@
+---
+import '../styles/global.css';
+const { pageTitle = "Nikita Mittal | Portfolio" } = Astro.props;
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content="Nikita Mittal — AI Enthusiast, Data Scientist, and ML Engineer. Portfolio showcasing projects in federated learning, RAG, and conversational AI." />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <slot />
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+      document.querySelectorAll('.section-reveal').forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>

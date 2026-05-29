@@ -1,11 +1,29 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import BaseLayout from '../Layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.svelte';
+import Hero from '../components/Hero.svelte';
+import About from '../components/About.svelte';
+import Skills from '../components/Skills.svelte';
+import Experience from '../components/Experience.svelte';
+import Projects from '../components/Projects.svelte';
+import Certifications from '../components/Certifications.svelte';
+import Contact from '../components/Contact.svelte';
+import FooterSection from '../components/FooterSection.svelte';
 ---
-
-<Layout>
-	<Welcome />
-</Layout>
+<BaseLayout pageTitle="Nikita Mittal | Portfolio">
+  <Navbar client:load />
+  <Hero client:load />
+  <div class="divider"></div>
+  <About client:visible />
+  <div class="divider"></div>
+  <Skills client:visible />
+  <div class="divider"></div>
+  <Experience client:visible />
+  <div class="divider"></div>
+  <Projects client:visible />
+  <div class="divider"></div>
+  <Certifications client:visible />
+  <div class="divider"></div>
+  <Contact client:visible />
+  <FooterSection client:visible />
+</BaseLayout>

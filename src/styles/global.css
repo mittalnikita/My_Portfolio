@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: #070d1c;
+  color: #e2e8f0;
+  overflow-x: hidden;
+}
+
+section {
+  width: 100%;
+}
+
+#Margin-top {
+  margin-top: 2rem;
+}
+
+#Margin-Padding {
+  /* margin-top: 2rem; */
+  padding: 2rem 2rem;
+}
+
+#Footer-Padding {
+  padding: 3rem 2rem;
+}
+
+#contact-email, #message, #name {
+  color: white;
+  padding: 0.5rem;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #070d1c; }
+::-webkit-scrollbar-thumb { background: #afc5f5; border-radius: 3px; }
+
+.gradient-text {
+  background: linear-gradient(135deg, #71a4f7, #9394f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass {
+  background: rgba(14, 27, 60, 0.85);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(37, 99, 235, 0.25);
+}
+
+.section-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  width: 100%;
+}
+
+.section-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 0.45rem 1.0rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, rgb(181, 93, 10), #f38034);
+  color: black;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(235, 156, 37, 0.35);
+}
+
+.btn-outline {
+  display: inline-block;
+  padding: 0.45rem 1.0rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background: transparent;
+  border: 1px solid #f1a61b;
+  color: #3b82f6;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn-outline:hover {
+  background: #0a4dde;
+  color: white;
+  transform: scale(1.05);
+}
+
+.card {
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin: 1rem;
+  transition: all 0.3s ease;
+  background: rgba(14, 27, 60, 0.85);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(37, 99, 235, 0.28);
+}
+.card:hover {
+  border-color: rgba(59, 130, 246, 0.5);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15);
+}
+
+.section-alt {
+  background: rgba(10, 20, 46, 0.5);
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.3), transparent);
+  margin: 2rem auto;
+  width: 80%;
+}
